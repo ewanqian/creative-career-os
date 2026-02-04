@@ -1,0 +1,158 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Knowledge Block",
+  "description": "A standardized knowledge block for Creative-Career-OS",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the knowledge block"
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of the knowledge block"
+    },
+    "type": {
+      "type": "string",
+      "description": "Type of knowledge block",
+      "enum": ["case", "module", "guide", "tool", "case_study"]
+    },
+    "domain": {
+      "type": "string",
+      "description": "Domain of the knowledge block",
+      "enum": ["defense", "proactive", "mindset", "efficiency", "relationship"]
+    },
+    "subdomain": {
+      "type": "string",
+      "description": "Subdomain of the knowledge block"
+    },
+    "content": {
+      "type": "string",
+      "description": "Main content of the knowledge block"
+    },
+    "context": {
+      "type": "string",
+      "description": "Context in which this knowledge block is applicable"
+    },
+    "variations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "scenario": {
+            "type": "string",
+            "description": "Specific scenario for this variation"
+          },
+          "response": {
+            "type": "string",
+            "description": "Response or solution for this scenario"
+          }
+        },
+        "required": ["scenario", "response"]
+      },
+      "description": "Different variations of the knowledge block for different scenarios"
+    },
+    "examples": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Examples of how to use this knowledge block"
+      },
+      "description": "Examples of how to use this knowledge block"
+    },
+    "feedback": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the feedback"
+          },
+          "content": {
+            "type": "string",
+            "description": "Feedback content"
+          },
+          "rating": {
+            "type": "integer",
+            "description": "Rating of the knowledge block",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "author": {
+            "type": "string",
+            "description": "Author of the feedback"
+          },
+          "date": {
+            "type": "string",
+            "description": "Date of the feedback"
+          }
+        },
+        "required": ["content", "rating"]
+      },
+      "description": "Feedback from users"
+    },
+    "rating": {
+      "type": "number",
+      "description": "Average rating of the knowledge block",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "usage_count": {
+      "type": "integer",
+      "description": "Number of times this knowledge block has been used",
+      "minimum": 0
+    },
+    "created_at": {
+      "type": "string",
+      "description": "Creation date of the knowledge block"
+    },
+    "updated_at": {
+      "type": "string",
+      "description": "Last update date of the knowledge block"
+    },
+    "version": {
+      "type": "string",
+      "description": "Version of the knowledge block"
+    },
+    "author": {
+      "type": "string",
+      "description": "Author of the knowledge block"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "Tag for the knowledge block"
+      },
+      "description": "Tags for the knowledge block"
+    },
+    "related_blocks": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "description": "ID of related knowledge block"
+      },
+      "description": "IDs of related knowledge blocks"
+    },
+    "skill_tree": {
+      "type": "object",
+      "properties": {
+        "root": {
+          "type": "string",
+          "description": "Root skill of the skill tree"
+        },
+        "branch": {
+          "type": "string",
+          "description": "Branch skill of the skill tree"
+        },
+        "leaf": {
+          "type": "string",
+          "description": "Leaf skill of the skill tree"
+        }
+      },
+      "description": "Skill tree position of the knowledge block"
+    }
+  },
+  "required": ["id", "title", "type", "domain", "content", "created_at"]
+}
