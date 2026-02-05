@@ -4,10 +4,13 @@
 
 [![版本](https://img.shields.io/badge/版本-v2.0--blue)](https://github.com/ewanqian/creative-career-os)
 [![协议](https://img.shields.io/badge/协议-CC%20BY--NC--SA%204.0-green)](LICENSE)
+[![更新](https://img.shields.io/badge/最近更新-2026--02--06-orange)](docs/最近更新.md)
 
 > 不只是知识库，更是你的职业生涯导航系统。
 > 
 > 从生存到影响力，陪伴你每一步。
+
+**📢 最近更新**：[查看最近30天更新 →](docs/最近更新.md)
 
 ---
 
